@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Wedding Invitation</title>
   <meta name="description" content="Wedding website and invitation">
   <style>
-    html, body { margin: 0; padding: 0; background: #f3ebe0; }
-    .wrap {
-      max-width: 520px;
-      margin: 0 auto;
-      background: #fff;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #f3ebe0;
+      overflow-x: hidden;
     }
     .frame {
       position: relative;
@@ -22,20 +23,23 @@
     }
     .frame iframe {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none; margin: 0; padding: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="frame">
-      <iframe loading="lazy"
-        src="https://www.canva.com/design/DAHXlZOCWfg/xQ450rNgXrPpQBUAA8uZEQ/view?embed"
-        allowfullscreen="allowfullscreen" allow="fullscreen"
-        title="Wedding Website"></iframe>
-    </div>
+  <div class="frame">
+    <iframe loading="lazy"
+      src="https://www.canva.com/design/DAHXlZOCWfg/xQ450rNgXrPpQBUAA8uZEQ/view?embed"
+      allowfullscreen="allowfullscreen" allow="fullscreen"
+      title="Wedding Website"></iframe>
   </div>
 </body>
 </html>
