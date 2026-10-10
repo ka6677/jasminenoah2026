@@ -158,6 +158,15 @@
   .social svg { width: 18px; height: 18px; fill: var(--red-dark); }
   .rsvp .photo { aspect-ratio: 1.068 / 1; width: 100%; max-width: 560px; justify-self: end; }
 
+  /* chinese lines */
+  .zh { font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 0.04em; }
+  h2 .zh { display: block; font-size: 0.34em; font-weight: 700; letter-spacing: 0.2em; margin-top: 0.5em; line-height: 1.2; }
+  .cols h3 .zh, .events h3 .zh, .faq h3 .zh { display: block; font-size: 0.85em; font-weight: 500; margin-top: 2px; }
+  p .zh, small .zh { display: block; margin-top: 2px; }
+  .script .zh { display: block; font-family: "Noto Sans SC", sans-serif; font-size: 0.26em; letter-spacing: 0.3em; margin-top: 0.6em; transform: none; }
+  .chip .zh { margin-left: 0.6em; letter-spacing: 0.08em; }
+  html { scroll-padding-top: 0; }
+
   footer { height: clamp(40px, 8vw, 100px); }
 
   /* mobile */
@@ -177,7 +186,7 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="chip">November 16, 2026 | Olympia, WA</div>
+  <div class="chip">November 16, 2026 | Olympia, WA <span class="zh">2026年11月16日 | 华盛顿州奥林匹亚</span></div>
   <h1>Jasmine &amp; Noah.</h1>
   <nav class="btns">
     <a class="btn gold" href="#schedule"><u>Schedule</u> 行程安排</a>
@@ -194,22 +203,22 @@
 
 <!-- ABOUT THE WEDDING -->
 <section class="wrap aw" id="wedding">
-  <h2 class="display">About the Wedding</h2>
+  <h2 class="display">About the Wedding<span class="zh">关于婚礼</span></h2>
   <div class="cols">
     <div>
       <div class="ph cut"><img src="images/venue.webp" alt="Washington State Capitol, Olympia" loading="lazy"></div>
-      <h3>VENUE</h3>
-      <p>The ceremony will be at the Washington State Capitol in Olympia.</p>
+      <h3>VENUE <span class="zh">地点</span></h3>
+      <p>The ceremony will be at the Washington State Capitol in Olympia.<span class="zh">婚礼将在奥林匹亚的华盛顿州议会大厦举行。</span></p>
     </div>
     <div>
       <div class="ph cut"><img src="images/accommodations.webp" alt="Guests relaxing outdoors" loading="lazy"></div>
-      <h3>ACCOMMODATIONS</h3>
-      <p>We will book accommodations for our guests in Olympia.</p>
+      <h3>ACCOMMODATIONS <span class="zh">住宿</span></h3>
+      <p>We will book accommodations for our guests in Olympia.<span class="zh">我们将为宾客在奥林匹亚安排住宿。</span></p>
     </div>
     <div>
       <div class="ph cut"><img src="images/activities.webp" alt="Picnic with peaches and champagne" loading="lazy"></div>
-      <h3>ACTIVITIES</h3>
-      <p>Join us for a meet-and-greet dinner the day before, and a dinner after the ceremony. Locations to be updated.</p>
+      <h3>ACTIVITIES <span class="zh">活动</span></h3>
+      <p>Join us for a meet-and-greet dinner the day before, and a dinner after the ceremony. Locations to be updated.<span class="zh">婚礼前一天有欢迎晚宴，仪式结束后有婚礼晚宴。具体地点待定。</span></p>
     </div>
   </div>
 </section>
@@ -217,42 +226,42 @@
 <!-- SCHEDULE -->
 <section class="wrap sched" id="schedule">
   <div>
-    <h2 class="display">Wedding<br>Schedule</h2>
+    <h2 class="display">Wedding<br>Schedule<span class="zh">婚礼日程</span></h2>
     <div class="deco ph cut"><img src="images/schedule-deco.webp" alt="" loading="lazy"></div>
   </div>
   <ol class="events">
     <li>
-      <small>Sunday, November 15<br>Time and location to be updated</small>
-      <h3>Meet-and-Greet Dinner</h3>
-      <p>Dinner with family and friends the day before the wedding</p>
+      <small>Sunday, November 15<br>Time and location to be updated<span class="zh">11月15日（周日）· 时间和地点待定</span></small>
+      <h3>Meet-and-Greet Dinner <span class="zh">欢迎晚宴</span></h3>
+      <p>Dinner with family and friends the day before the wedding<span class="zh">婚礼前一天与家人朋友共进晚餐</span></p>
     </li>
     <li>
-      <small>2:00 PM, Monday, November 16<br>Washington State Capitol, Olympia</small>
-      <h3>Wedding Ceremony</h3>
-      <p>Please arrive at least 15 minutes early</p>
+      <small>2:00 PM, Monday, November 16<br>Washington State Capitol, Olympia<span class="zh">11月16日（周一）下午2:00 · 华盛顿州议会大厦，奥林匹亚</span></small>
+      <h3>Wedding Ceremony <span class="zh">婚礼仪式</span></h3>
+      <p>Please arrive at least 15 minutes early<span class="zh">请至少提前15分钟到场</span></p>
     </li>
     <li>
-      <small>Monday, November 16<br>Time and location to be updated</small>
-      <h3>Wedding Dinner</h3>
-      <p>Dinner together after the ceremony</p>
+      <small>Monday, November 16<br>Time and location to be updated<span class="zh">11月16日（周一）· 时间和地点待定</span></small>
+      <h3>Wedding Dinner <span class="zh">婚礼晚宴</span></h3>
+      <p>Dinner together after the ceremony<span class="zh">仪式结束后共进晚餐</span></p>
     </li>
   </ol>
 </section>
 
 <!-- FAQ -->
 <section class="wrap faq" id="faq">
-  <h2 class="display">Frequently Asked Questions</h2>
+  <h2 class="display">Frequently Asked Questions<span class="zh">常见问题</span></h2>
   <div>
-    <h3>Do I need to RSVP?</h3>
-    <p>No RSVP needed. It's a small group.</p>
-    <h3>What time should I arrive?</h3>
-    <p>The ceremony starts at 2:00 PM. Please arrive at least 15 minutes early.</p>
-    <h3>Is there a dress code?</h3>
-    <p>Dressy attire, suitable for Seattle-area weather in November.</p>
-    <h3>Where will we stay?</h3>
-    <p>We will book accommodations for our guests in Olympia.</p>
-    <h3>Do you have a wedding registry?</h3>
-    <p>No registry. We just want you there.</p>
+    <h3>Do I need to RSVP? <span class="zh">需要回复是否出席吗？</span></h3>
+    <p>No RSVP needed. It's a small group.<span class="zh">不需要。人数不多，无需回复。</span></p>
+    <h3>What time should I arrive? <span class="zh">几点到场？</span></h3>
+    <p>The ceremony starts at 2:00 PM. Please arrive at least 15 minutes early.<span class="zh">仪式下午2:00开始，请至少提前15分钟到场。</span></p>
+    <h3>Is there a dress code? <span class="zh">有着装要求吗？</span></h3>
+    <p>Dressy attire, suitable for Seattle-area weather in November.<span class="zh">请穿着正式一些，并考虑西雅图地区11月的天气。</span></p>
+    <h3>Where will we stay? <span class="zh">住在哪里？</span></h3>
+    <p>We will book accommodations for our guests in Olympia.<span class="zh">我们会在奥林匹亚为宾客安排住宿。</span></p>
+    <h3>Do you have a wedding registry? <span class="zh">有婚礼礼物清单吗？</span></h3>
+    <p>No registry. We just want you there.<span class="zh">没有。你的到来就是最好的礼物。</span></p>
   </div>
   <div class="art ph cut"><img src="images/faq.webp" alt="" loading="lazy"></div>
 </section>
@@ -260,18 +269,29 @@
 <!-- RSVP -->
 <section class="wrap rsvp" id="rsvp">
   <div>
-    <p class="script">See you there</p>
-    <h2 class="display by">November 16</h2>
+    <p class="script">See you there<span class="zh">期待与你相见</span></p>
+    <h2 class="display by">November 16<span class="zh">11月16日</span></h2>
     <div class="contact">
-      <h4>Ceremony</h4>
-      <p class="line">2:00 PM, Washington State Capitol, Olympia</p>
-      <h4>Questions?</h4>
-      <p>Message us directly.</p>
+      <h4>Ceremony <span class="zh">仪式</span></h4>
+      <p class="line">2:00 PM, Washington State Capitol, Olympia<span class="zh">下午2:00 · 华盛顿州议会大厦，奥林匹亚</span></p>
+      <h4>Questions? <span class="zh">有问题？</span></h4>
+      <p>Message us directly.<span class="zh">请直接联系我们。</span></p>
     </div>
   </div>
   <div class="photo ph cut"><img src="images/rsvp.webp" alt="Couple laughing at a garden table" loading="lazy"></div>
 </section>
 
 <footer></footer>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var t = document.querySelector(a.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', a.getAttribute('href'));
+    });
+  });
+</script>
 </body>
 </html>
