@@ -1,45 +1,294 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Wedding Invitation</title>
-  <meta name="description" content="Wedding website and invitation">
-  <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background: #f3ebe0;
-      overflow-x: hidden;
-    }
-    .frame {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-top: 393.5578%;
-      overflow: hidden;
-    }
-    .frame iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      margin: 0;
-      padding: 0;
-      display: block;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jasmine &amp; Noah | November 16, 2026</title>
+<meta name="description" content="Jasmine & Noah wedding website. November 16, 2026, Olympia, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&family=Mrs+Saint+Delafield&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e6d5bd;
+    --red: #b8321a;
+    --red-dark: #9a2a12;
+    --text: #8b2a14;
+    --gold: #a89228;
+    --paper: #f3ece2;
+    --pad: clamp(20px, 5.5vw, 64px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Special Elite", "Noto Sans SC", "Courier New", monospace;
+    font-size: clamp(13px, 1.6vw, 16px);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  section { scroll-margin-top: 0; }
+
+  /* shared */
+  .display {
+    font-family: "Anton", "Noto Sans SC", Impact, sans-serif;
+    font-weight: 400;
+    color: var(--red);
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .ph { background: #cdb99a; overflow: hidden; position: relative; }
+  .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .wrap { padding: clamp(48px, 9vw, 110px) var(--pad); }
+
+  /* hero */
+  .hero {
+    position: relative;
+    min-height: min(100svh, 640px);
+    height: 60vw;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px var(--pad);
+    background: #7a6a58 url("images/hero.jpg") center/cover no-repeat;
+  }
+  .chip {
+    background: rgba(243, 236, 226, 0.92);
+    color: #3b2a22;
+    letter-spacing: 0.18em;
+    padding: 6px 14px;
+    font-size: clamp(11px, 1.7vw, 17px);
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(54px, 15vw, 190px);
+    color: var(--red-dark);
+    margin: 0.12em 0 0.3em;
+    letter-spacing: -0.03em;
+  }
+  .btns { display: flex; gap: clamp(10px, 2vw, 22px); flex-wrap: wrap; justify-content: center; }
+  .btn {
+    text-decoration: none;
+    color: #fff;
+    padding: clamp(12px, 2vw, 22px) clamp(18px, 3.2vw, 44px);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: clamp(11px, 1.7vw, 17px);
+    white-space: nowrap;
+  }
+  .btn u { text-underline-offset: 3px; }
+  .btn.gold { background: var(--gold); }
+  .btn.red { background: #c4361a; }
+
+  /* polaroid band */
+  .band {
+    min-height: clamp(300px, 56vw, 760px);
+    display: grid;
+    place-items: center;
+    padding: 6vw var(--pad);
+    background: #8a7a60 url("images/field.jpg") center/cover no-repeat;
+  }
+  .polaroid {
+    width: clamp(210px, 43vw, 440px);
+    background: #f4f6f8;
+    padding: 5% 5% 14%;
+    box-shadow: 0 8px 30px rgba(0,0,0,.28);
+  }
+  .polaroid .ph { aspect-ratio: 1.12 / 1; }
+
+  /* about us */
+  .about { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+  .about h2 { font-size: clamp(48px, 8vw, 100px); margin-bottom: 0.4em; }
+  .about p { max-width: 30ch; margin: 0 0 1.2em; font-size: clamp(12px, 1.5vw, 14px); }
+  .collage { position: relative; width: 100%; aspect-ratio: 1.07 / 1; }
+  .collage > * { position: absolute; }
+  .collage .map { left: 8%; top: 0; width: 82%; height: 100%; background: #d9c7a8; }
+  .collage .couple { right: 0; top: 7%; width: 47%; height: 78%; }
+  .collage .pol { left: 0; top: 17%; width: 52%; background: #f4f6f8; padding: 3% 3% 9%; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .collage .pol .ph { aspect-ratio: 1.2 / 1; }
+  .collage .dot { left: 33%; bottom: 8%; width: 20%; aspect-ratio: 1; border-radius: 50%; background: #e0a516; box-shadow: 0 0 0 6px #f0c640 inset; }
+
+  /* about the wedding */
+  .aw h2 { text-align: center; font-size: clamp(44px, 8vw, 100px); margin-bottom: clamp(24px, 4vw, 48px); }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 4vw, 56px); text-align: center; }
+  .cols .ph { aspect-ratio: 1.27 / 1; margin-bottom: 14px; }
+  .cols h3 { font-weight: 400; margin: 0 0 6px; letter-spacing: 0.05em; font-size: clamp(13px, 1.7vw, 16px); }
+  .cols p { margin: 0 auto; max-width: 24ch; font-size: clamp(11px, 1.4vw, 13px); }
+
+  /* schedule */
+  .sched { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+  .sched h2 { font-size: clamp(48px, 8vw, 100px); }
+  .sched .deco { margin-top: clamp(20px, 5vw, 60px); width: 100%; max-width: 360px; aspect-ratio: 1.15 / 1; }
+  .events { list-style: none; margin: 0; padding: 0; }
+  .events li { border-top: 1px solid var(--red); padding: 14px 0 18px; }
+  .events li:last-child { border-bottom: 1px solid var(--red); }
+  .events small { display: block; font-size: clamp(10px, 1.3vw, 12px); line-height: 1.4; }
+  .events h3 { font-weight: 400; text-transform: uppercase; margin: 8px 0 2px; font-size: clamp(16px, 2.4vw, 24px); letter-spacing: 0.02em; }
+  .events p { margin: 0; font-size: clamp(11px, 1.5vw, 14px); }
+
+  /* faq */
+  .faq { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+  .faq h2 { grid-column: 1 / -1; font-size: clamp(40px, 7.8vw, 100px); margin-bottom: 0.4em; }
+  .faq h3 { font-weight: 400; text-transform: uppercase; margin: 0 0 4px; font-size: clamp(15px, 2.2vw, 22px); }
+  .faq p { margin: 0 0 clamp(20px, 3vw, 36px); max-width: 52ch; font-size: clamp(11px, 1.5vw, 14px); }
+  .faq .art { aspect-ratio: 1 / 1.1; width: 100%; max-width: 380px; justify-self: end; }
+
+  /* rsvp */
+  .rsvp { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(24px, 5vw, 64px); align-items: end; }
+  .script { font-family: "Mrs Saint Delafield", cursive; color: #2a1a16; font-size: clamp(54px, 9vw, 120px); line-height: 0.8; margin: 0 0 -0.05em; transform: rotate(-4deg); transform-origin: left bottom; }
+  .rsvp .by { font-size: clamp(40px, 6.5vw, 84px); margin: 0 0 clamp(28px, 6vw, 80px) 0.2em; }
+  .contact h4 { font-weight: 400; text-transform: uppercase; margin: 18px 0 2px; font-size: clamp(14px, 2vw, 20px); }
+  .contact p { margin: 0; font-size: clamp(12px, 1.6vw, 14px); }
+  .contact .line { border-bottom: 1px solid var(--red); max-width: 280px; padding-bottom: 8px; margin-bottom: 4px; }
+  .social { display: flex; gap: 12px; margin-top: 6px; }
+  .social svg { width: 18px; height: 18px; fill: var(--red-dark); }
+  .rsvp .photo { aspect-ratio: 1 / 1.08; width: 100%; max-width: 560px; justify-self: end; }
+
+  footer { height: clamp(40px, 8vw, 100px); }
+
+  /* mobile */
+  @media (max-width: 760px) {
+    .about, .sched, .faq, .rsvp { grid-template-columns: 1fr; }
+    .about p { max-width: none; }
+    .cols { grid-template-columns: 1fr; gap: 36px; }
+    .cols .ph { max-width: 420px; margin-left: auto; margin-right: auto; }
+    .sched .deco { display: none; }
+    .faq .art { justify-self: center; max-width: 320px; }
+    .rsvp .photo { justify-self: center; }
+    .hero { height: auto; min-height: 480px; }
+  }
+</style>
 </head>
 <body>
-  <div class="frame">
-    <iframe loading="lazy"
-      src="https://www.canva.com/design/DAHXlZOCWfg/xQ450rNgXrPpQBUAA8uZEQ/view?embed"
-      allowfullscreen="allowfullscreen" allow="fullscreen"
-      title="Wedding Website"></iframe>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="chip">November 16, 2026 | Olympia, WA</div>
+  <h1>Jasmine &amp; Noah.</h1>
+  <nav class="btns">
+    <a class="btn gold" href="#schedule"><u>Schedule</u> 行程安排</a>
+    <a class="btn red" href="#faq"><u>FAQ</u> 常见问题</a>
+  </nav>
+</header>
+
+<!-- POLAROID BAND -->
+<div class="band">
+  <div class="polaroid">
+    <div class="ph"><img src="images/polaroid.jpg" alt="Jasmine and Noah walking through a field" loading="lazy"></div>
   </div>
+</div>
+
+<!-- ABOUT US -->
+<section class="wrap about" id="about">
+  <div>
+    <h2 class="display">About Us</h2>
+    <p>We first met in college, lost touch after graduation, then bumped into each other again a couple of years later at a mutual friend's birthday party. We went on our first date a week later and we've become inseparable ever since!</p>
+    <p>As we're taking the next step in our life together, we're so happy and excited to celebrate our wedding day with you!</p>
+  </div>
+  <div class="collage">
+    <div class="map ph"></div>
+    <div class="couple ph"><img src="images/about-couple.jpg" alt="Jasmine and Noah" loading="lazy"></div>
+    <div class="pol"><div class="ph"><img src="images/about-table.jpg" alt="Dinner table in a garden" loading="lazy"></div></div>
+    <div class="dot"></div>
+  </div>
+</section>
+
+<!-- ABOUT THE WEDDING -->
+<section class="wrap aw" id="wedding">
+  <h2 class="display">About the Wedding</h2>
+  <div class="cols">
+    <div>
+      <div class="ph"><img src="images/venue.jpg" alt="Washington State Capitol, Olympia" loading="lazy"></div>
+      <h3>VENUE</h3>
+      <p>The ceremony will be at WA state capitol in Olympia.</p>
+    </div>
+    <div>
+      <div class="ph"><img src="images/accommodations.jpg" alt="Guests relaxing outdoors" loading="lazy"></div>
+      <h3>ACCOMMODATIONS</h3>
+      <p>We will book hotel for guest at Olympia.</p>
+    </div>
+    <div>
+      <div class="ph"><img src="images/activities.jpg" alt="Picnic with peaches and champagne" loading="lazy"></div>
+      <h3>ACTIVITIES</h3>
+      <p>Please join us for the meet-and-greet dinner on the day before the wedding and a post-wedding dinner the day of.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="wrap sched" id="schedule">
+  <div>
+    <h2 class="display">Wedding<br>Schedule</h2>
+    <div class="deco ph"><img src="images/schedule-deco.jpg" alt="" loading="lazy"></div>
+  </div>
+  <ol class="events">
+    <li>
+      <small>6:00 PM, July 14<br>Viewpoint Garden Hotel Restaurant</small>
+      <h3>Rehearsal Dinner</h3>
+      <p>Get-together with family and friends before the big day</p>
+    </li>
+    <li>
+      <small>4:00 PM, July 15<br>Viewpoint Garden Hotel Events Area</small>
+      <h3>Wedding Ceremony</h3>
+      <p>Riley and Lin get married in a formal ceremony</p>
+    </li>
+    <li>
+      <small>5:00 PM, July 15<br>Viewpoint Garden Hotel Events Area</small>
+      <h3>Cocktail Hour</h3>
+      <p>Drinks and hors d'oeuvres before the reception</p>
+    </li>
+    <li>
+      <small>6:00 PM, July 15<br>Viewpoint Garden Hotel Events Area</small>
+      <h3>Wedding Reception</h3>
+      <p>Dinner and a program then dancing afterwards</p>
+    </li>
+  </ol>
+</section>
+
+<!-- FAQ -->
+<section class="wrap faq" id="faq">
+  <h2 class="display">Frequently Asked Questions</h2>
+  <div>
+    <h3>How do I RSVP?</h3>
+    <p>Please RSVP by April 1st. See the contact page below for contact details to RSVP.</p>
+    <h3>Is there a dress code for the wedding?</h3>
+    <p>Please come in dressy or smart casual garden attire. Think light-colored suits, slacks with button-down shirts, and midi or maxi dresses in light colors or florals. Contact us for any questions!</p>
+    <h3>Do you have a wedding registry?</h3>
+    <p>The greatest gift is your presence! But if you'd like to help us start our lives as newlyweds, click the "Registry" button on the homepage above!</p>
+  </div>
+  <div class="art ph"><img src="images/faq.jpg" alt="" loading="lazy"></div>
+</section>
+
+<!-- RSVP -->
+<section class="wrap rsvp" id="rsvp">
+  <div>
+    <p class="script">Please RSVP</p>
+    <h2 class="display by">By April 1</h2>
+    <div class="contact">
+      <h4>Phone</h4>
+      <p class="line"><a href="tel:+11234567890" style="text-decoration:none">(123) 456-7890</a></p>
+      <h4>Email</h4>
+      <p class="line"><a href="mailto:hello@reallygreatsite.com" style="text-decoration:none">hello@reallygreatsite.com</a></p>
+      <h4>Social</h4>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.7.3-1 1-1h2V2h-3c-3 0-4.500 1.800-4.500 4.500V8H7v3.500h2.500V22H14V11.500h2.800L17.300 8z"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.900 6.800-1.700 8c-.1.600-.5.700-1 .4l-2.600-1.900-1.200 1.200c-.1.100-.3.300-.5.300l.2-2.700 4.900-4.400c.2-.2 0-.3-.3-.1l-6 3.800-2.600-.8c-.6-.2-.6-.6.100-.8l10.100-3.900c.5-.2.900.1.600.9z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5zM17.500 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="photo ph"><img src="images/rsvp.jpg" alt="Jasmine and Noah laughing at a garden table" loading="lazy"></div>
+</section>
+
+<footer></footer>
 </body>
 </html>
