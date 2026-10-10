@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jasmine &amp; Noah | November 16, 2026</title>
+<link rel="preload" as="image" href="images/hero.jpg">
 <meta name="description" content="Jasmine & Noah wedding website. November 16, 2026, Olympia, WA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,9 @@
   }
   .ph { background: #cdb99a; overflow: hidden; position: relative; }
   .ph img { width: 100%; height: 100%; object-fit: cover; }
+  /* transparent cutout collages: no box, show whole image */
+  .cut { background: transparent; overflow: visible; }
+  .cut img { object-fit: contain; }
   .wrap { padding: clamp(48px, 9vw, 110px) var(--pad); }
 
   /* hero */
@@ -98,12 +102,13 @@
     background: #8a7a60 url("images/field.jpg") center/cover no-repeat;
   }
   .polaroid {
-    width: clamp(210px, 43vw, 440px);
+    --pw: clamp(270px, 62vw, 680px);
+    width: var(--pw);
     background: #f4f6f8;
-    padding: 5% 5% 14%;
+    padding: calc(var(--pw) * 0.04) calc(var(--pw) * 0.04) calc(var(--pw) * 0.13);
     box-shadow: 0 8px 30px rgba(0,0,0,.28);
   }
-  .polaroid .ph { aspect-ratio: 1.12 / 1; }
+  .polaroid .ph { aspect-ratio: 1.6 / 1; }
 
   /* about us */
   .about { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
@@ -120,14 +125,14 @@
   /* about the wedding */
   .aw h2 { text-align: center; font-size: clamp(44px, 8vw, 100px); margin-bottom: clamp(24px, 4vw, 48px); }
   .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 4vw, 56px); text-align: center; }
-  .cols .ph { aspect-ratio: 1.27 / 1; margin-bottom: 14px; }
+  .cols .ph { aspect-ratio: 1.33 / 1; margin-bottom: 14px; }
   .cols h3 { font-weight: 400; margin: 0 0 6px; letter-spacing: 0.05em; font-size: clamp(13px, 1.7vw, 16px); }
   .cols p { margin: 0 auto; max-width: 24ch; font-size: clamp(11px, 1.4vw, 13px); }
 
   /* schedule */
   .sched { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
   .sched h2 { font-size: clamp(48px, 8vw, 100px); }
-  .sched .deco { margin-top: clamp(20px, 5vw, 60px); width: 100%; max-width: 360px; aspect-ratio: 1.15 / 1; }
+  .sched .deco { margin-top: clamp(20px, 5vw, 60px); width: 100%; max-width: 400px; aspect-ratio: 1.3 / 1; }
   .events { list-style: none; margin: 0; padding: 0; }
   .events li { border-top: 1px solid var(--red); padding: 14px 0 18px; }
   .events li:last-child { border-bottom: 1px solid var(--red); }
@@ -140,7 +145,7 @@
   .faq h2 { grid-column: 1 / -1; font-size: clamp(40px, 7.8vw, 100px); margin-bottom: 0.4em; }
   .faq h3 { font-weight: 400; text-transform: uppercase; margin: 0 0 4px; font-size: clamp(15px, 2.2vw, 22px); }
   .faq p { margin: 0 0 clamp(20px, 3vw, 36px); max-width: 52ch; font-size: clamp(11px, 1.5vw, 14px); }
-  .faq .art { aspect-ratio: 1 / 1.1; width: 100%; max-width: 380px; justify-self: end; }
+  .faq .art { aspect-ratio: 1.077 / 1; width: 100%; max-width: 380px; justify-self: end; }
 
   /* rsvp */
   .rsvp { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(24px, 5vw, 64px); align-items: end; }
@@ -151,7 +156,7 @@
   .contact .line { border-bottom: 1px solid var(--red); max-width: 280px; padding-bottom: 8px; margin-bottom: 4px; }
   .social { display: flex; gap: 12px; margin-top: 6px; }
   .social svg { width: 18px; height: 18px; fill: var(--red-dark); }
-  .rsvp .photo { aspect-ratio: 1 / 1.08; width: 100%; max-width: 560px; justify-self: end; }
+  .rsvp .photo { aspect-ratio: 1.068 / 1; width: 100%; max-width: 560px; justify-self: end; }
 
   footer { height: clamp(40px, 8vw, 100px); }
 
@@ -183,7 +188,7 @@
 <!-- POLAROID BAND -->
 <div class="band">
   <div class="polaroid">
-    <div class="ph"><img src="images/polaroid.jpg" alt="Jasmine and Noah engagement" loading="lazy"></div>
+    <div class="ph"><img src="images/polaroid.jpg" alt="Couple walking through a field" loading="lazy"></div>
   </div>
 </div>
 
@@ -192,17 +197,17 @@
   <h2 class="display">About the Wedding</h2>
   <div class="cols">
     <div>
-      <div class="ph"><img src="images/venue.svg" alt="Washington State Capitol, Olympia" loading="lazy"></div>
+      <div class="ph cut"><img src="images/venue.webp" alt="Washington State Capitol, Olympia" loading="lazy"></div>
       <h3>VENUE</h3>
       <p>The ceremony will be at the Washington State Capitol in Olympia.</p>
     </div>
     <div>
-      <div class="ph"><img src="images/accommodations.svg" alt="Guests relaxing outdoors" loading="lazy"></div>
+      <div class="ph cut"><img src="images/accommodations.webp" alt="Guests relaxing outdoors" loading="lazy"></div>
       <h3>ACCOMMODATIONS</h3>
       <p>We will book accommodations for our guests in Olympia.</p>
     </div>
     <div>
-      <div class="ph"><img src="images/activities.svg" alt="Picnic with peaches and champagne" loading="lazy"></div>
+      <div class="ph cut"><img src="images/activities.webp" alt="Picnic with peaches and champagne" loading="lazy"></div>
       <h3>ACTIVITIES</h3>
       <p>Join us for a meet-and-greet dinner the day before, and a dinner after the ceremony. Locations to be updated.</p>
     </div>
@@ -213,7 +218,7 @@
 <section class="wrap sched" id="schedule">
   <div>
     <h2 class="display">Wedding<br>Schedule</h2>
-    <div class="deco ph"><img src="images/schedule-deco.svg" alt="" loading="lazy"></div>
+    <div class="deco ph cut"><img src="images/schedule-deco.webp" alt="" loading="lazy"></div>
   </div>
   <ol class="events">
     <li>
@@ -249,7 +254,7 @@
     <h3>Do you have a wedding registry?</h3>
     <p>No registry. We just want you there.</p>
   </div>
-  <div class="art ph"><img src="images/faq.svg" alt="" loading="lazy"></div>
+  <div class="art ph cut"><img src="images/faq.webp" alt="" loading="lazy"></div>
 </section>
 
 <!-- RSVP -->
@@ -264,7 +269,7 @@
       <p>Message us directly.</p>
     </div>
   </div>
-  <div class="photo ph"><img src="images/rsvp.svg" alt="Jasmine and Noah hottub" loading="lazy"></div>
+  <div class="photo ph cut"><img src="images/rsvp.webp" alt="Couple laughing at a garden table" loading="lazy"></div>
 </section>
 
 <footer></footer>
